@@ -85,6 +85,8 @@ background-color: #0b0372;
 	display: inline-block;
 	line-height: 50px;
 	margin-left: 25px;
+	border-bottom: 2px;
+	
 }
 .header .menu > ul > li > a{
 	font-size: 22px;
@@ -93,20 +95,44 @@ background-color: #0b0372;
 	position: relative;
 	text-transform: capitalize;
 	transition: color 0.3s ease;
+	
 }
 .header .menu > ul > li .sub-menu{
 	position: absolute;
 	z-index: 500;
-	background-color:rgb(57, 57, 154);
+	background-color:white;
 	box-shadow: -2px 2px 70px -25px rgba(0,0,0,0.3); 
 	padding: 20px 30px;
 	transition: all 0.5s ease;
 	margin-top:25px;
 	opacity:0;
 	visibility: hidden;
+	
+	
 }
+.header .menu > ul > li:hover .sub-menu {
+	opacity: 1;
+	visibility: visible;
+	 /* Add margin to create space between the main menu and sub-menu */
+  }
 
-
+.header .menu > ul > li > a:hover {
+ /* Change the color to your desired text color */
+	box-shadow: 0 3px white; /* Add a 3px margin with the desired color below the text */
+  }
+  
+  /* Reset the box-shadow for non-hovered items */
+  .header .menu > ul > li > a {
+	box-shadow: none; /* Remove box-shadow by default */
+  }
+  
+  .header .menu > ul > li:hover .sub-menu {
+	opacity: 1;
+	visibility: visible;
+  }
+  
+  
+  
 /* CSS */
 .sign-btn {
 	color: #fff;
@@ -490,7 +516,7 @@ opacity:50;
 		padding:10px 0;
 		display: inline-block;
 		font-size: 15px;
-		color: white;
+		color: black;
 		transition: color 0.3s ease;
 	}
 	.header .menu > ul > li .sub-menu.mega-menu{ 
@@ -499,10 +525,15 @@ opacity:50;
 	}
 	
 	.header .menu > ul > li .sub-menu.mega-menu-column-4{
-	  max-width: 1100px;
-	  width: 100%; 	
-	  display: flex;
-	  flex-wrap: wrap;
+		
+		top: 100px;
+	 
+	 width: 1200px;
+	height: 400px;
+	display: flex;
+	color: white;
+
+	
 	  padding:20px 15px;
 	}
 	.header .menu > ul > li .sub-menu.mega-menu-column-4 > .list-item{
@@ -624,6 +655,7 @@ opacity:50;
 			height: 50px;
 			padding:0 50px 0 15px;
 			display: block;
+		
 			border-bottom: 1px solid rgba(0,0,0,0.1);
 		}
 		.header .menu > ul > li > a i{
